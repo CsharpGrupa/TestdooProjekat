@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD18A9D4-C53F-413B-9177-D44847B7876F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestdooProjekat</RootNamespace>
+    <AssemblyName>TestdooProjekat</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CategoryClass.cs" />
+    <Compile Include="Classes\CustomerClass.cs" />
+    <Compile Include="Classes\EmployeeClass.cs" />
+    <Compile Include="Classes\ProductClass.cs" />
+    <Compile Include="Classes\ShipperClass.cs" />
+    <Compile Include="Classes\SupplierClass.cs" />
+    <Compile Include="Classes\UserClass.cs" />
+    <Compile Include="Customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpOrder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderValue.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shipper.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminPage.Designer.cs">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DBEntityValidationException.cs" />
+    <Compile Include="Views\EmployeeHRUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeHRUpdate.Designer.cs">
+      <DependentUpon>EmployeeHRUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeHR.Designer.cs">
+      <DependentUpon>EmployeeHR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeHR_InsertNewEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeHR_InsertNewEmp.Designer.cs">
+      <DependentUpon>EmployeeHR_InsertNewEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeSalesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeSalesPage.Designer.cs">
+      <DependentUpon>EmployeeSalesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogisticEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogisticEmployee.Designer.cs">
+      <DependentUpon>LogisticEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogisticEmployee_InsertNewShipper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogisticEmployee_InsertNewShipper.Designer.cs">
+      <DependentUpon>LogisticEmployee_InsertNewShipper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogisticEmployee_ViewShippers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogisticEmployee_ViewShippers.Designer.cs">
+      <DependentUpon>LogisticEmployee_ViewShippers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogisticManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogisticManager.Designer.cs">
+      <DependentUpon>LogisticManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesEmployeeFOrderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesEmployeeFOrderPage.Designer.cs">
+      <DependentUpon>SalesEmployeeFOrderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesEmployee_MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesEmployee_MainPage.Designer.cs">
+      <DependentUpon>SalesEmployee_MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesManager_Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesManager_Orders.Designer.cs">
+      <DependentUpon>SalesManager_Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogisticManager_OrdersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogisticManager_OrdersView.Designer.cs">
+      <DependentUpon>LogisticManager_OrdersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductManager.Designer.cs">
+      <DependentUpon>ProductManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee.Designer.cs">
+      <DependentUpon>ProductsEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_InserNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_InserNewProduct.Designer.cs">
+      <DependentUpon>ProductsEmployee_InserNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_InserNewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_InserNewSupplier.Designer.cs">
+      <DependentUpon>ProductsEmployee_InserNewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_UpdateProduct.Designer.cs">
+      <DependentUpon>ProductsEmployee_UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_UpdateSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsEmployee_UpdateSuppliers.Designer.cs">
+      <DependentUpon>ProductsEmployee_UpdateSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesManager.Designer.cs">
+      <DependentUpon>SalesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesNewOrder.Designer.cs">
+      <DependentUpon>SalesNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesPageForCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SalesPageForCustomers.Designer.cs">
+      <DependentUpon>SalesPageForCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sales_UpdateCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Sales_UpdateCustomers.Designer.cs">
+      <DependentUpon>Sales_UpdateCustomers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeHRUpdate.resx">
+      <DependentUpon>EmployeeHRUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeHR.resx">
+      <DependentUpon>EmployeeHR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeHR_InsertNewEmp.resx">
+      <DependentUpon>EmployeeHR_InsertNewEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeSalesPage.resx">
+      <DependentUpon>EmployeeSalesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogisticEmployee.resx">
+      <DependentUpon>LogisticEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogisticEmployee_InsertNewShipper.resx">
+      <DependentUpon>LogisticEmployee_InsertNewShipper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogisticEmployee_ViewShippers.resx">
+      <DependentUpon>LogisticEmployee_ViewShippers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogisticManager.resx">
+      <DependentUpon>LogisticManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogisticManager_OrdersView.resx">
+      <DependentUpon>LogisticManager_OrdersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductManager.resx">
+      <DependentUpon>ProductManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsEmployee.resx">
+      <DependentUpon>ProductsEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsEmployee_InserNewProduct.resx">
+      <DependentUpon>ProductsEmployee_InserNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsEmployee_InserNewSupplier.resx">
+      <DependentUpon>ProductsEmployee_InserNewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsEmployee_UpdateProduct.resx">
+      <DependentUpon>ProductsEmployee_UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsEmployee_UpdateSuppliers.resx">
+      <DependentUpon>ProductsEmployee_UpdateSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesEmployeeFOrderPage.resx">
+      <DependentUpon>SalesEmployeeFOrderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesEmployee_MainPage.resx">
+      <DependentUpon>SalesEmployee_MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesManager.resx">
+      <DependentUpon>SalesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesManager_Orders.resx">
+      <DependentUpon>SalesManager_Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesNewOrder.resx">
+      <DependentUpon>SalesNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SalesPageForCustomers.resx">
+      <DependentUpon>SalesPageForCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Sales_UpdateCustomers.resx">
+      <DependentUpon>Sales_UpdateCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
